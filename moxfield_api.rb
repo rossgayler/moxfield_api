@@ -35,7 +35,7 @@ module MoxfieldApi
 
   def deck_names(user="rostrophobia")
     decks = get_decks
-    decks.map { |deck| "#{deck['name']} #{deck['publicId']}" }
+    decks.map { |deck| deck['name'] }
   end
 
   # { "id", "name",
