@@ -52,7 +52,7 @@ module MoxfieldApi
     card_counts = Hash.new(0)
     decks.each do |deck_info|
       next if forbidden_decks.include?(deck_info["name"])
-      deck = get_deck(public_id)
+      deck = get_deck(deck_info["publicId"])
       deck["mainboard"].each do |card_name, card_info|
         next if filter_out(card_info['card'], filter_type)
         card_counts[card_name] += 1
