@@ -29,7 +29,7 @@ module MoxfieldApi
   #     "publicUrl"=>"https://www.moxfield.com/decks/JbTAV1khu0m7FC6xIYe7Ow"
   #     ""
   def get_decks(user="rostrophobia")
-    decks_url = "https://api.moxfield.com/v2/users/#{user}/decks"
+    decks_url = "https://api.moxfield.com/v2/users/#{user}/decks?pageSize=100"
     JSON.parse(request(decks_url))['data']
   end
 
